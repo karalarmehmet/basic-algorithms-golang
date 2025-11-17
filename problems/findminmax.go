@@ -10,8 +10,8 @@ func main() {
 	min, max := findMinMax(arr)
 
 	// Sonuçları yazdıralım
-	fmt.Printf("Dizideki en küçük sayı: %d\n", min)
-	fmt.Printf("Dizideki en büyük sayı: %d\n", max)
+	fmt.Printf("smallets num in the array: %d\n", min)
+	fmt.Printf("greatest number in the array: %d\n", max)
 
 }
 

@@ -55,7 +55,7 @@ func primeNum(p []int) bool {
 		} else if val > 2 && val%2 == 0 {
 			return false
 		}
-		for i := 3; i*i <= val; i += 2 {
+		for i := 3; i*i <= val; i += 2 { //If a number has a divisor, at least one factor must be less than or equal to its square root
 			if val%i == 0 {
 				return false
 			}

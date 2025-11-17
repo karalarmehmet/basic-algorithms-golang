@@ -1,28 +1,27 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 )
 
 // decimal is base 10
-func main() {
-	var a int
-	var b int
-	fmt.Println("Enter a Dec and a Base for converter")
-	fmt.Scanf("%d %d", &a, &b)
-	charMap := map[rune]int{
-		'A': 10,
-		'B': 11,
-		'C': 12,
-		'D': 13,
-		'E': 14,
-		'F': 15,
-	}
-	res := DecToBase(a, b, charMap)
-	fmt.Println(res)
+// func main() {
+// 	var a int
+// 	var b int
+// 	fmt.Println("Enter a Dec and a Base for converter")
+// 	fmt.Scanf("%d %d", &a, &b)
+// 	charMap := map[rune]int{
+// 		'A': 10,
+// 		'B': 11,
+// 		'C': 12,
+// 		'D': 13,
+// 		'E': 14,
+// 		'F': 15,
+// 	}
+// 	res := DecToBase(a, b, charMap)
+// 	fmt.Println(res)
 
-}
+// }
 
 func DecToBase(a, b int, c map[rune]int) string {
 	var reminder int

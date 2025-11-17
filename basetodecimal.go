@@ -1,17 +1,13 @@
 package main
 
-import (
-	"fmt"
-)
-
-func main() {
-	fmt.Println("Enter a base and string that needs to be converted to decimal")
-	var a int
-	var b string
-	fmt.Scanf("%d %s", &a, &b)
-	res := baseToDec(a, b)
-	fmt.Println(res)
-}
+// func main() {
+// 	fmt.Println("Enter a base and string that needs to be converted to decimal")
+// 	var a int
+// 	var b string
+// 	fmt.Scanf("%d %s", &a, &b)
+// 	res := baseToDec(a, b)
+// 	fmt.Println(res)
+// }
 
 func baseToDec(a int, b string) int {
 	const digits = "0123456789ABCDEF"

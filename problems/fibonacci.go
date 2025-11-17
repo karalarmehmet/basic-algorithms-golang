@@ -12,38 +12,28 @@ import (
 // 0   1   1    2   3    5   8   13   21   34
 //	   a   b    a
 
-func fibonacciIterative(n int) {
+func fibonacciIterative(n int) []int {
+	res := make([]int, n+1) //	res := make([]int, 0, n+1)
 	a, b := 0, 1
-
 	for i := 0; i < n; i++ {
-		fmt.Print(a, " ")
+		res[i] = a // if we use "res := make([]int, 0, n+1)" then in this line we use res=append(res,a) but now we assigne indexes
 		a, b = b, a+b
-
 	}
-
+	return res
 }
 
 func main() {
+	fmt.Println("Enter the number of fibonacci terms")
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Println("Please enter the number of fibonacci terms ")
+	input, _ := reader.ReadString('\n')
+	input = strings.TrimSpace(input)
+	number, err := strconv.Atoi(input)
 
-	for {
-		input, _ := reader.ReadString('\n')
-		input = strings.TrimSpace(input)
-
-		num, err := strconv.Atoi(input)
-
-		if err != nil || num < 0 {
-			fmt.Println("Please enter a valid positvie number")
-
-			continue
-
-		}
-		fmt.Printf("First %d fibonacci numbers ", num)
-		fibonacciIterative(num)
-		break
+	if number < 0 || err != nil {
+		fmt.Println("please enter a valid number of terms")
 	}
-
+	res := fibonacciIterative(number)
+	fmt.Println(res)
 }
 
 // When you call reader.ReadString('\n'), Go reads everything up until the newline and stores it in the input variable.
